@@ -26,6 +26,10 @@ async function sendVerificationEmail(email, otp) {
       "Verification Email",
       emailTemplate(otp)
     );
+<<<<<<< HEAD
+=======
+
+>>>>>>> e7eb7db735c1f3ea86c665bd7da1025742dddf09
   } catch (error) {
     console.log("Error occurred while sending email: ", error);
     throw error;
