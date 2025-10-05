@@ -2,26 +2,26 @@ const mongoose = require("mongoose");
 
 // Define the RatingAndReview schema
 const ratingAndReviewSchema = new mongoose.Schema({
-	user: {
-		type: mongoose.Schema.Types.ObjectId,
-		required: true,
-		ref: "user",
-	},
-	rating: {
-		type: Number,
-		required: true,
-	},
-	review: {
-		type: String,
-		required: true,
-	},
-	course: {
-		type: mongoose.Schema.Types.ObjectId,
-		required: true,
-		ref: "Course",
-		index: true, // This gives because we have to perform aggregation operation on it
-        // This gives better performance
-	},
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+    ref: "User",
+  },
+  rating: {
+    type: Number,
+    required: true,
+  },
+  review: {
+    type: String,
+    required: true,
+  },
+  course: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+    ref: "Course",
+    index: true, // This gives because we have to perform aggregation operation on it
+    // This gives better performance
+  },
 });
 
 module.exports = mongoose.model("RatingAndReview", ratingAndReviewSchema);
