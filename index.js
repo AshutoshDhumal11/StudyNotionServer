@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://studynotion-c4gu.onrender.com",
+    origin: "https://study-notion-eta-nine.vercel.app/",
     credentials: true,
   })
 );

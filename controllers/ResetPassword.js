@@ -36,7 +36,7 @@ exports.resetPasswordToken = async (req, res) => {
     console.log("Details", updatedDetails);
 
     // Generate frontend url
-    const url = `http://localhost:3000/update-password/${token}`;
+    const url = `https://study-notion-eta-nine.vercel.app/update-password/${token}`;
     // we have to update url after deployment
 
     // Send email to user containing the url
